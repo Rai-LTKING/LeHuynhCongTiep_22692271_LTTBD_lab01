@@ -18,6 +18,15 @@ import { Logger } from "./bai17";
 import { MathUtil } from "./bai18";
 import { Animal19,Dog19, Cat19 } from "./bai19";
 import { Vehicle, Car20, Bike } from "./bai20";
+import { Repository } from "./bai21";
+import { Stack } from "./bai22";
+import { Payment, CardPayment, CashPayment } from "./bai23";
+import { AirConditioner, Fan } from "./bai24";
+import { Shape } from "./bai25";
+import { Order } from "./bai26";
+import { Teacher } from "./bai27";
+import { Car29, Robot } from "./bai29";
+import { School } from "./bai30";
 
 //bai 01
 console.log('Bài 01:');
@@ -162,3 +171,72 @@ const car20 = new Car20();
 car20.start();
 const bike = new Bike();
 bike.start();
+
+//bai21
+console.log('Bài 21:');
+const repoo = new Repository<string>();
+repoo.add('ITEM A');
+console.log('All Items:', repoo.getAll());
+
+//bai22
+console.log('Bài 22:');
+const stack = new Stack<number>();
+stack.push(1);
+stack.push(2);
+stack.push(3);
+console.log('Peek:', stack.peek());
+console.log('Pop:', stack.pop());
+console.log('Is Empty:', stack.isEmpty());
+
+//bai23
+console.log('Bài 23:');
+const cashPayment = new CashPayment();
+cashPayment.pay(300);
+const cardPayment = new CardPayment();
+cardPayment.pay(500);
+
+//bai24
+console.log('Bài 24:');
+const fan = new Fan();
+fan.turnOn();
+const airConditioner = new AirConditioner();
+airConditioner.turnOn();
+
+//bai25
+console.log('Bài 25:');
+Shape.describe();
+
+//bai26
+console.log('Bài 26:');
+const order = new Order();
+order.addProduct(new Product('Product A', 500));
+order.addProduct(new Product('Prodduct B', 1000));
+console.log('Total:', order.calculateTotal());
+
+//bai27
+console.log('Bài 27:');
+const teacher = new Teacher('Tep', 30, 'Mathematics');
+teacher.introduce();
+
+//bai28
+console.log('Bài 28:');
+const dog28 = new Dog19("Dog");
+dog28.makeSound();
+const cat28 = new Cat19("Cat");
+cat28.makeSound();
+
+//bai29
+console.log('Bài 29:');
+const car29 = new Car29();
+car29.move();
+const robot = new Robot();
+robot.move();
+
+//bai30
+console.log('Bài 30:');
+const sh = new School();
+const studentA = new Student('TEPPY', 21, 'A');
+const teacherB = new Teacher('Teacher TIEP', 35, 'math');
+sh.addStudent(studentA);
+sh.addTeacher(teacherB);
+sh.displayInfo();

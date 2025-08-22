@@ -19,6 +19,15 @@ const bai17_1 = require("./bai17");
 const bai18_1 = require("./bai18");
 const bai19_1 = require("./bai19");
 const bai20_1 = require("./bai20");
+const bai21_1 = require("./bai21");
+const bai22_1 = require("./bai22");
+const bai23_1 = require("./bai23");
+const bai24_1 = require("./bai24");
+const bai25_1 = require("./bai25");
+const bai26_1 = require("./bai26");
+const bai27_1 = require("./bai27");
+const bai29_1 = require("./bai29");
+const bai30_1 = require("./bai30");
 //bai 01
 console.log('Bài 01:');
 const person = new bai01_1.Person('Tiep', 21);
@@ -140,3 +149,62 @@ const car20 = new bai20_1.Car20();
 car20.start();
 const bike = new bai20_1.Bike();
 bike.start();
+//bai21
+console.log('Bài 21:');
+const repoo = new bai21_1.Repository();
+repoo.add('ITEM A');
+console.log('All Items:', repoo.getAll());
+//bai22
+console.log('Bài 22:');
+const stack = new bai22_1.Stack();
+stack.push(1);
+stack.push(2);
+stack.push(3);
+console.log('Peek:', stack.peek());
+console.log('Pop:', stack.pop());
+console.log('Is Empty:', stack.isEmpty());
+//bai23
+console.log('Bài 23:');
+const cashPayment = new bai23_1.CashPayment();
+cashPayment.pay(300);
+const cardPayment = new bai23_1.CardPayment();
+cardPayment.pay(500);
+//bai24
+console.log('Bài 24:');
+const fan = new bai24_1.Fan();
+fan.turnOn();
+const airConditioner = new bai24_1.AirConditioner();
+airConditioner.turnOn();
+//bai25
+console.log('Bài 25:');
+bai25_1.Shape.describe();
+//bai26
+console.log('Bài 26:');
+const order = new bai26_1.Order();
+order.addProduct(new bai08_1.Product('Product A', 500));
+order.addProduct(new bai08_1.Product('Prodduct B', 1000));
+console.log('Total:', order.calculateTotal());
+//bai27
+console.log('Bài 27:');
+const teacher = new bai27_1.Teacher('Tep', 30, 'Mathematics');
+teacher.introduce();
+//bai28
+console.log('Bài 28:');
+const dog28 = new bai19_1.Dog19("Dog");
+dog28.makeSound();
+const cat28 = new bai19_1.Cat19("Cat");
+cat28.makeSound();
+//bai29
+console.log('Bài 29:');
+const car29 = new bai29_1.Car29();
+car29.move();
+const robot = new bai29_1.Robot();
+robot.move();
+//bai30
+console.log('Bài 30:');
+const sh = new bai30_1.School();
+const studentA = new bai02_1.Student('TEPPY', 21, 'A');
+const teacherB = new bai27_1.Teacher('Teacher TIEP', 35, 'math');
+sh.addStudent(studentA);
+sh.addTeacher(teacherB);
+sh.displayInfo();
