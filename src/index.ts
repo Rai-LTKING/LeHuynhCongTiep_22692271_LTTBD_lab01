@@ -8,6 +8,16 @@ import { User } from "./bai07";
 import { Product } from "./bai08";
 import { Animal } from "./bai09";
 import { Account } from "./bai10";
+import { Cat, Dog } from "./bai11";
+import { Bird, Fish } from "./bai12";
+import { Square, Circle } from "./bai13";
+import { Manager, Developer } from "./bai14";
+import { Library } from "./bai15";
+import { Box } from "./bai16";
+import { Logger } from "./bai17";
+import { MathUtil } from "./bai18";
+import { Animal19,Dog19, Cat19 } from "./bai19";
+import { Vehicle, Car20, Bike } from "./bai20";
 
 //bai 01
 console.log('Bài 01:');
@@ -67,7 +77,7 @@ expensiveProducts.forEach(p => p.displayInfo());
 
 //bai 09
 console.log('Bài 09:');
-class Dog implements Animal {
+class Dog1 implements Animal {
   name: string = "Dog";
 
   constructor(name: string) {
@@ -78,11 +88,77 @@ class Dog implements Animal {
     console.log(`${this.name} says: Woof woof `);
   }
 }
-const dog = new Dog("Rex");
-dog.sound();
+const dog = new Dog1("Rex");
+dog.sound;
 
 //bai10
 console.log('Bài 10:');
 const accountMain = new Account('Ahihi', 1200);
 console.log('ID:', accountMain.id);
 console.log('Created At:', accountMain.createdAt);
+
+//bai11
+console.log('Bài 11:');
+const doga = new Dog('ALAA');
+doga.bark();
+const cata = new Cat('ORANGE');
+cata.meow();
+
+//bai12
+console.log('Bài 12:');
+const bird = new Bird();
+bird.fly();
+const fish = new Fish();
+fish.swim();
+
+//bai13
+console.log('Bài 13:');
+const square = new Square(5);
+console.log(`Area of Square: ${square.area()}`);
+const circle = new Circle(3);
+console.log(`Area of Circle: ${circle.area()}`);
+
+//bai14
+console.log('Bài 14:');
+const manager = new Manager('TEPPP');
+manager.manageTeam();
+const developer = new Developer('TIEP');
+developer.code();
+
+//bai15
+console.log('Bài 15:');
+const library = new Library();
+const bookADD = new Book('ABC', 'TIEP', 2020);
+library.addBook(bookADD);
+console.log('Books in Library:', library.books);
+
+//bai16
+console.log('Bài 16:');
+const box = new Box<string>('Hello World BOx');
+console.log('Box contains:', box.value);
+
+//bai17
+console.log('Bài 17:');
+const logger = Logger.getInstance();
+logger.log('This is a log message!!!.');
+
+//bai18
+console.log('Bài 18:');
+console.log('Addition:', MathUtil.add(10, 3));
+console.log('Subtraction:', MathUtil.subtract(10, 3));
+console.log('Multiplication:', MathUtil.multiply(10, 3));
+console.log('Division:', MathUtil.divide(10, 3));
+
+//bai19
+console.log('Bài 19:');
+const animals: Animal19[] = [new Dog19('AAAAAAAAAAAA'), new Cat19('CCCCC')];
+animals.forEach(animal => {
+    animal.makeSound();
+});
+
+//bai20
+console.log('Bài 20:');
+const car20 = new Car20();
+car20.start();
+const bike = new Bike();
+bike.start();
